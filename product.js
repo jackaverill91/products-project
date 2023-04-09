@@ -27,11 +27,3 @@ const start = async () => {
 }
 
 start();
-
-// const fetchProduct = () => {
-// 	fetch(url)
-// 		.then((resp) => resp.json())
-// 		.then((data) => data)
-// 		.catch((err) => console.log(err));
-		
-// }
