@@ -2,7 +2,6 @@ const url = 'https://course-api.com/javascript-store-products';
 
 const productsDOM = document.querySelector('.products-center');
 
-// this function fetches the data from API, turns it into a JSON and then returns it for later use. It also handles the loading icon and any errors
 const fetchProducts = async () => {
   try {
 		const resp = await fetch(url);
@@ -14,7 +13,6 @@ const fetchProducts = async () => {
   }
 }
 
-// this function takes care of rendering products on the screen
 const displayProducts = (list) => {
 	const productList = list.map((product) => {
 		// id,name,price,img
@@ -33,7 +31,6 @@ const displayProducts = (list) => {
 	productsDOM.innerHTML = `<div class="products-container">${productList}</div>`;
 };
 
-// this function fetches the data by returning the fetchProducts function as a promise, and then passing it into the displayProducts function
 const start = async () => {
 	const data = await fetchProducts();
 	displayProducts(data);
